@@ -15,14 +15,18 @@
         <div class="header-overlay">
             <div class="header-container">
                 <div class="logo-block">
-                    <img src="IMG/LogoDom.png" alt="Большой Дом" class="logo-image">
+                    <a href="index.html"> 
+                        <img src="IMG/LogoDom.png" alt="Большой Дом" class="logo-image">
+                    </a>
                 </div>
                 <nav class="nav-menu">
-                    <a href="#">Преимущества</a>
-                    <a href="#">Проекты</a>
-                    <a href="#">Этапы</a>
-                    <a href="#">Отзывы</a>
-                    <a href="#">Контакты</a>
+                    <a href="#about_us">О нас</a>
+                    <a href="#Prem">Преимущества</a>
+                    <a href="#project">Проекты</a>
+                    <a href="#work">Карьера</a>
+                    <a href="#satages">Этапы</a>
+                    <a href="#reviews">Отзывы</a>
+                    <a href="#contakt">Контакты</a>
                 </nav>
                 <div class="phone-block">
                     <div class="phone-number-wrapper">
@@ -43,22 +47,28 @@
                 <h1 class="hero__main-title">И СТРОИТЕЛЬСТВО ЗДАНИЙ</h1>
                 
                 <div class="hero__footer-group">
-                    <button class="button_zaiavka">ОСТАВИТЬ ЗАЯВКУ</button>
+                    <a href="#zaiavka">
+                        <button class="button_zaiavka">ОСТАВИТЬ ЗАЯВКУ</button>
+                    </a>
                     <p class="hero__description">динамичная многопрофильная<br>проектно-строительная компания</p>
                 </div>
             </div>
             
-            <div class="hero__right">
                 <div class="building-types">
-                    <div class="building-type"><span>КОММЕРЧЕСКИЙ</span></div>
-                    <div class="building-type"><span>ТЕХНИЧЕСКИЙ</span></div>
-                    <div class="building-type"><span>ЖИЛОЙ</span></div>
+                    <div class="hero__right">
+                        <div class="building-type"><span>КОММЕРЧЕСКИЙ</span></div>
+                    </div>
+                    <div class="hero__right2">
+                        <div class="building-type"><span>ТЕХНИЧЕСКИЙ</span></div>
+                    </div>
+                    <div class="hero__right2">
+                        <div class="building-type"><span>ЖИЛОЙ</span></div>
+                    </div>
                 </div>
-            </div>
         </div>
     </section>
 
-    <section class="about-section">
+    <section class="about-section" id="about_us">
         <div class="container">
             <div class="about-header">
                 <span class="about-brand">[ Большой дом ]</span>
@@ -96,7 +106,7 @@
         </div>
     </section>
 
-    <section class="benefits-section">
+    <section class="benefits-section" id="Prem">
         <div class="container">
             <div class="benefits-header">
                 <span class="about-brand">[ Дома ]</span>
@@ -154,7 +164,7 @@
         </div>
     </section>
 
-    <section class="projects-section">
+    <section class="projects-section" id="project">
         <div class="container-wide">
             <div class="projects-header">
                 <span class="about-brand">[ Постройки ]</span>
@@ -166,12 +176,16 @@
 
             <div class="projects-grid">
                 <div class="project-card">
-                    <div class="project-img-container">
-                        <img src="IMG/Barnaul.png" alt="Барнаул">
+                    <a href="index2.html" class="project-link">
+                        <div class="project-img-container">
+                            <img src="IMG/Barnaul.png" alt="Барнаул">
+                    </a>
                         <span class="project-price">от 7 500 000 ₽</span>
                     </div>
                     <div class="project-info">
-                        <h3>БАРНАУЛ <span>&rarr;</span></h3>
+                        <a href="index2.html" class="project-link">
+                            <h3>БАРНАУЛ <span>&rarr;</span></h3>
+                        </a>
                         <p>2022</p>
                     </div>
                 </div>
@@ -259,7 +273,7 @@
             
         </div>
     </section>
-    <section class="career-section">
+    <section class="career-section" id="work">
         <div class="container-career">
             <div class="career-header">
                 <span class="about-brand">[ Компания ]</span>
@@ -314,7 +328,7 @@
             </div>
         </div>
     </section>
-    <section class="steps-section">
+    <section class="steps-section" id="satages">
         <div class="container-steps">
             <div class="steps-header">
                 <span class="about-brand white">[ этапы работы ]</span>
@@ -373,7 +387,7 @@
             </div>
         </div>
     </section>
-    <section class="reviews-section">
+    <section class="reviews-section" id="reviews">
     <div class="container-wide">
         <div class="reviews-header">
             <span class="label-tag">[ отзывы ]</span>
@@ -425,7 +439,7 @@
         </div>
     </div>
     </section>
-    <section class="contacts-section">
+    <section class="contacts-section" id="contakt">
     <div class="container-wide">
         <div class="contacts-header">
             <span class="label-tag">[ геолокация ]</span>
@@ -442,11 +456,11 @@
             </div>
             <div class="info-item">
                 <h5>ГОРЯЧАЯ ЛИНИЯ</h5>
-                <a href="tel:88121112233" class="contact-link">8 (812) 111-22-33</a>
+                <a class="info-item">8 (812) 111-22-33</a>
             </div>
             <div class="info-item">
                 <h5>ПОЧТА</h5>
-                <a href="mailto:info@bighouse.ru" class="contact-link">info@bighouse.ru</a>
+                <a class="info-item">info@bighouse.ru</a>
             </div>
             <div class="info-item">
                 <h5>ВРЕМЯ РАБОТЫ</h5>
@@ -467,5 +481,100 @@
         </div>
     </div>
     </section>
+    <section class="form-section" id="zaiavka">
+    <div class="container-wide">
+        <div class="form-header">
+            <span class="label-tag">[ форма ]</span>
+            <div class="title-wrap">
+                <h2 class="section-title">Оставить заявку</h2>
+                <div class="title-line"></div>
+            </div>
+        </div>
+
+        <form class="application-form">
+            <div class="form-grid">
+                <div class="input-group">
+                    <input type="text" id="name" name="name" placeholder="Имя*" required>
+                </div>
+                <div class="input-group">
+                    <input type="email" id="email" name="email" placeholder="Email*" required>
+                </div>
+                <div class="input-group">
+                    <input type="tel" id="phone" name="phone" placeholder="Телефон*" required>
+                </div>
+                <div class="input-group">
+                    <input type="text" id="info" name="info" placeholder="Доп. информация">
+                </div>
+            </div>
+
+            <div class="form-footer">
+                <div class="privacy-policy">
+                    <label class="checkbox-container">
+                        <input type="checkbox" checked required>
+                        <span class="checkmark"></span>
+                        Я даю согласие на <a href="#">обработку персональных данных</a>
+                    </label>
+                </div>
+                
+                <button type="submit" class="submit-btn">ОТПРАВИТЬ</button>
+            </div>
+        </form>
+    </div>
+    </section>
+    <footer class="footer">
+    <div class="container-wide">
+        <div class="footer-grid">
+            
+            <div class="footer-brand">
+                <h2 class="footer-logo">Большой Дом</h2>
+                <p class="footer-description">
+                    Проектирование и строительство комфортных загородных домов «под ключ» с гарантией качества и фиксированной сметой.
+                </p>
+                <p class="footer-copyright">
+                    © 2026 Компания «Большой дом». Все права защищены.
+                </p>
+            </div>
+
+            <div class="footer-nav">
+                <h4 class="footer-title">НАВИГАЦИЯ</h4>
+                <ul class="footer-list">
+                    <li><a href="#about_us">О нас</a></li>
+                    <li><a href="#Prem">Преимущества</a></li>
+                    <li><a href="#project">Проекты домов</a></li>
+                    <li><a href="#work">Карьера</a></li>
+                    <li><a href="#satages">Этапы работы</a></li>
+                    <li><a href="#contakt">Отзывы</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contacts">
+                <h4 class="footer-title">КОНТАКТЫ</h4>
+                
+                <div class="contact-item">
+                    <img src="IMG/iconify-icon.png" alt="" class="contact-icon">
+                    <div class="contact-text">
+                        <a class="contact-link">8 (812) 111-22-33</a>
+                        <span>Ежедневно с 9:00 до 20:00</span>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <img src="IMG/iconify-icon2.png" alt="" class="contact-icon">
+                    <div class="contact-text">
+                        <a class="contact-link">info@bighouse.ru</a>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <img src="IMG/SVG.png" alt="" class="contact-icon">
+                    <div class="contact-text">
+                        <p>Россия, 191186, Санкт-Петербург, <br>ул. Большая Морская, 18</br></p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</footer>
 </body>
 </html>

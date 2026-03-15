@@ -5,10 +5,16 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Montserrat', sans-serif;
     background-color: #fff;
     color: #000;
+    padding-top: 80px;
+    
 }
 
 /* ШАПКА */
@@ -19,11 +25,18 @@ body {
 }
 
 .header-overlay {
-    background: rgba(255, 255, 255, 0.6);
-    border: 1px solid #e6e6e6;
-    border-radius: 12px;
-    max-width: 1400px;
-    margin: 0 auto;
+    position: fixed; /* Фиксирует шапку относительно окна браузера */
+    top: 30px;          /* Прижимает к самому верху */
+    left: 0;         /* Растягивает от левого края */
+    width: 95%;     /* Растягивает на всю ширину */
+    z-index: 1000;   /* Поднимает шапку над всеми остальными блоками */
+    margin-left: 60px;
+    margin-right: 60px;
+    
+    /* Дополнительно: добавьте фон и тень, чтобы текст сайта не просвечивал */
+    background: rgba(255, 255, 255, 0.95); 
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
 }
 
 .header-container {
@@ -33,7 +46,7 @@ body {
     padding: 10px 30px;
 }
 
-.logo-image { width: 60px; height: auto; }
+.logo-image { width: 100px; height: auto; }
 
 .nav-menu { display: flex; gap: 30px; }
 .nav-menu a {
@@ -76,7 +89,7 @@ body {
     background: rgba(255, 255, 255, 0.9);
     padding: 60px;
     border-radius: 4px;
-    max-width: 900px;
+    max-width: 920px;
 }
 
 .hero__header-group {
@@ -87,32 +100,33 @@ body {
 }
 
 .hero__label {
-    border: 2px solid #000;
+    border: 1px solid #000;
     padding: 10px 20px;
-    font-size: 38px;
-    font-weight: 800;
+    font-size: 43px;
+    font-weight: 700;
 }
 
 .hero__subtitle {
     font-size: 18px;
     max-width: 350px;
-    font-weight: 500;
+    font-weight: 300;
 }
 
 .hero__main-title {
-    font-size: 48px;
-    font-weight: 800;
-    border: 2px solid #000;
+    font-size: 43px;
+    font-weight: 700;
+    border: 1px solid #000;
     display: inline-block;
     padding: 10px 20px;
     margin-left: 60px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
+    max-width: 1000px;
 }
 
 .hero__footer-group {
     display: flex;
     align-items: center;
-    gap: 60px;
+    gap: 50px;
     margin-left: 60px;
 }
 
@@ -120,25 +134,37 @@ body {
     background: #000;
     color: #fff;
     border: none;
-    padding: 20px 40px;
+    padding: 20px 90px;
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 200;
     cursor: pointer;
 }
 
 .hero__description {
     font-size: 18px;
-    font-weight: 500;
+    font-weight: 300;
 }
 
 .hero__right {
     background: rgba(255, 255, 255, 0.9);
-    padding: 40px 30px;
-    border-radius: 4px;
+    padding: 20px 20px;
+    border-radius: 8px;
 }
 
-.building-types { display: flex; flex-direction: column; gap: 20px; }
-.building-type span { font-weight: 600; font-size: 14px; letter-spacing: 1px; }
+.hero__right2 {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px 20px;
+    border-radius: 8px;
+}
+
+.hero__right3 {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px 20px;
+    border-radius: 8px;
+}
+
+.building-types { display: flex; flex-direction: column; gap: 20px; align-items: flex-end;}
+.building-type span { font-weight: 500; font-size: 14px; letter-spacing: 1px; }
 
 /* СЕКЦИЯ О НАС */
 .about-section {
@@ -573,7 +599,6 @@ body {
 
 /* ========== СЕКЦИЯ КАРЬЕРА ========== */
 .career-section {
-    padding: 100px 0;
     background-color: #fff;
     overflow: hidden;
 }
@@ -949,7 +974,7 @@ body {
 .info-item h5 {
     font-size: 16px;
     font-weight: 700;
-    color: #bbb;
+    color: #787878;
     margin-bottom: 20px;
     letter-spacing: 1px;
 }
@@ -1004,3 +1029,377 @@ body {
     }
 }
 
+.form-section {
+    padding: 100px 0;
+    background-color: #fff;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Шапка аналогична предыдущим блокам */
+.form-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 80px;
+}
+
+.label-tag {
+    font-size: 20px;
+    font-weight: 700;
+    color: #999;
+}
+
+.title-wrap {
+    text-align: right;
+}
+
+.section-title {
+    font-size: 48px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.title-line {
+    width: 100px;
+    height: 5px;
+    background: #222;
+    margin-left: auto;
+}
+
+/* Сетка инпутов */
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px 60px;
+    margin-bottom: 50px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.input-group input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #999; /* Линия как в макете */
+    padding: 15px 0;
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.input-group input:focus {
+    border-bottom-color: #222;
+}
+
+.input-group input::placeholder {
+    color: #bbb;
+}
+
+/* Чекбокс и кнопка */
+.form-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: flex-start;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+}
+
+.checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 22px;
+    width: 22px;
+    background-color: #fff;
+    border: 1px solid #222;
+}
+
+.checkbox-container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.checkmark:after {
+    content: "✓";
+    position: absolute;
+    left: 4px;
+    top: -2px;
+    font-size: 18px;
+    color: #222;
+    display: none;
+}
+
+.privacy-policy a {
+    color: #333;
+    text-decoration: underline;
+}
+
+.submit-btn {
+    width: 350px;
+    padding: 20px;
+    background: transparent;
+    border: 1px solid #222;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+    background: #222;
+    color: #fff;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+    .submit-btn {
+        width: 100%;
+    }
+}
+
+/* Основные стили футера */
+.footer {
+    background-color: #1a1a1a; /* Темный фон как в макете */
+    color: #ffffff;
+    padding: 80px 0 60px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container-wide {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1.2fr; /* Пропорции колонок */
+    gap: 80px;
+}
+
+/* Логотип и описание */
+.footer-logo {
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+.footer-description {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #999; /* Приглушенный текст */
+    max-width: 380px;
+    margin-bottom: 50px;
+}
+
+.footer-copyright {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Названия разделов */
+.footer-title {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+/* Меню навигации */
+.footer-list {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-list li {
+    margin-bottom: 15px;
+}
+
+.footer-list a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-list a:hover {
+    color: #fff;
+}
+
+/* Блок контактов */
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.contact-icon {
+    width: 20px;
+    margin-top: 5px;
+    /* Если используете иконки-картинки, можно добавить фильтр для смены цвета на зеленый */
+    filter: invert(34%) sepia(48%) saturate(464%) hue-rotate(85deg) brightness(95%) contrast(88%);
+}
+
+.contact-link {
+    display: block;
+    color: #9CA3AF;
+    text-decoration: none;
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+
+.contact-text span, 
+.contact-text p {
+    font-size: 15px;
+    color: #9CA3AF;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 1024px) {
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+    .footer-brand, .footer-nav, .footer-contacts {
+        text-align: center;
+    }
+    .footer-description {
+        margin: 0 auto 30px;
+    }
+    .contact-item {
+        justify-content: center;
+    }
+}
+
+.project-detail {
+    padding: 60px 0;
+    background-color: #fff;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.project-header {
+    margin-bottom: 40px;
+}
+
+.project-main-title {
+    font-size: 48px;
+    font-weight: 800;
+    margin-top: 10px;
+    text-transform: none;
+}
+
+/* Блок характеристик */
+.project-info-block {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 60px;
+    align-items: flex-start;
+}
+
+.project-main-image {
+    flex: 1.5;
+}
+
+.project-main-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.project-specifications {
+    flex: 1;
+    border-top: 1px solid #e0e0e0;
+}
+
+.spec-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0;
+    border-bottom: 1px solid #e0e0e0;
+    gap: 20px;
+}
+
+.spec-label {
+    font-size: 20px;
+    color: #000000;
+    font-weight: 500;
+    min-width: 120px;
+}
+
+.spec-value {
+    font-size: 16px;
+    color: #000;
+    font-weight: 0;
+    text-align: right;
+}
+
+/* Сетка галереи */
+.project-gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+/* Адаптивность */
+@media (max-width: 1024px) {
+    .project-info-block {
+        flex-direction: column;
+    }
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.form-header_page2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 80px;
+}
+
+.project-link {
+    text-decoration: none; /* Убирает подчеркивание, если есть текст */
+}
