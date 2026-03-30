@@ -1885,6 +1885,29 @@ body.popup-open {
     .tags-row {
         flex-wrap: wrap;
     }
+
+    .spec-row {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+
+    }
+
+
+    .hero__header-group,
+    .hero__main-title,
+    .button_zaiavka {
+
+        margin: 15px 30px;
+
+    }
+
+    .building-types {
+        display: flex;
+        flex-direction: row;
+        margin-top: 100px;
+    }
+
 }
 
 
